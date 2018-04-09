@@ -32,16 +32,27 @@ describe('SemVersionクラス', () => {
         });
     });
 
-
-
-
     describe('インスタンスは文字列として変換できる', () => {
         it('Version{ major: 1, minor: 2, patch 3 } のとき、"1.2.3" を得る', () => {
             assert.equal(version.toString(), '1.2.3');
         });
     });
 
-    describe('バージョンオブジェクトは等価性比較や大小比較ができる。', () => {
+    describe('バージョンオブジェクトは透過比較ができる', () => {
+        it('Version10.3.5のcompareメソッドにVersion10.3.5のインスタンスを渡されると', () => {
+            const actual = new SemVersion(10, 3, 5);
+            const target = new SemVersion(10, 3, 5);
+            assert.equal(actual.equal(target), true);
+        });
+        
+        it('Version10.3.5のcompareメソッドにVersion11.3.5のインスタンスを渡されると', () => {
+            const actual = new SemVersion(10, 3, 5);
+            const target = new SemVersion(11, 3, 5);
+            assert.equal(actual.equal(target), false);
+        });
+    });
+
+    describe('バージョンオブジェクトは大小比較ができる。', () => {
         it('Version1.3.9のcompareメソッドにVersion1.4.2のインスタンスを渡されると、-1を返す。', () => {
             const actual = new SemVersion(1, 3, 9);
             const target = new SemVersion(1, 4, 2);

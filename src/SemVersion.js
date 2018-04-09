@@ -20,6 +20,13 @@ class SemVersion {
         return `${this.major}.${this.minor}.${this.patch}`;
     }
 
+    equal(target) {
+        const comparedMajor = compareTwoNumber(this.major, target.major)
+        const comparedMinor = compareTwoNumber(this.minor, target.minor)
+        const comparedPatch = compareTwoNumber(this.patch, target.patch)
+        return comparedMajor === 0 && comparedMinor === 0 && comparedPatch === 0;
+    }
+
     compare(target) {
         const comparedMajor = compareTwoNumber(this.major, target.major)
         if (comparedMajor !== 0) {
