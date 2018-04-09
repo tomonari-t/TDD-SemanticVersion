@@ -6,6 +6,9 @@ class SemVersion {
         this.minor = minor;
         this.patch = patch;
     }
+    toString() {
+        return `${this.major}.${this.minor}.${this.patch}`;
+    }
 }
 
 module.exports = SemVersion;
