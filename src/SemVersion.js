@@ -49,7 +49,9 @@ class SemVersion {
     }
 
     _validate(major, minor, patch) {
-        return major >= 0 && minor >= 0 && patch >= 0;
+        const isAllInteger = Number.isInteger(major) && Number.isInteger(minor) && Number.isInteger(patch);
+        const isAllOverZero = major >= 0 && minor >= 0 && patch >= 0;
+        return isAllInteger && isAllOverZero;
     }
 }
 

@@ -16,9 +16,9 @@
         - [x] Version{ major: null, minor: undefined, patch [] } のとき例外をthrowする
 
     - [ ] バージョンオブジェクトは等価性比較や大小比較ができる。
-        - [ ] Version1.3.9のcompareメソッドにVersion1.4.2のインスタンスを渡されると、-1を返す。
-        - [ ] Version10.3.5のcompareメソッドにVersion2.23.1のインスタンスを渡されると、1を返す。
-        - [ ] Version1.4.2のcompareメソッドにVersion1.4.2のインスタンスを渡されると、0を返す。
+        - [x] Version1.3.9のcompareメソッドにVersion1.4.2のインスタンスを渡されると、-1を返す。
+        - [x] Version10.3.5のcompareメソッドにVersion2.23.1のインスタンスを渡されると、1を返す。
+        - [x] Version1.4.2のcompareメソッドにVersion1.4.2のインスタンスを渡されると、0を返す。
 
 
 
