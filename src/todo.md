@@ -4,11 +4,11 @@
     - [x] インスタンスは文字列として変換できる
         - [x] Version{ major: 1, minor: 2, patch 3 } のとき、"1.2.3" を得る
 
-- [] バージョン番号が条件を満たしているか判断するクラスをつくる。
+- [] バージョン番号が条件を満たしているか判断する関数をつくる。
     - [] semver においてバージョンの各フィールドは0以上の整数である。
-        - [] Version{ major: 0, minor: 0, patch 0 } を受け取ったときtrueを返す。
+        - [x] Version{ major: 0, minor: 0, patch 0 } を受け取ったときtrueを返す。
     - [] semver においてバージョンの各フィールドは0以上の整数以外ではいけない。
-        - [] Version{ major: null, minor: undefined, patch [] }　を受け取ったときfalseを返す
+        - [x] Version{ major: null, minor: undefined, patch [] }　を受け取ったときfalseを返す
 
 ---
 
