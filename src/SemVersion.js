@@ -6,9 +6,11 @@ const compareTwoNumber = (a, b) => {
     return 0;
 }
 
+const validate = Symbol('validate')
+
 class SemVersion {
     constructor(major, minor, patch) {
-        if (!this._validate(major, minor, patch)) {
+        if (!this[validate](major, minor, patch)) {
             throw new TypeError('Invalid Arguments Error');
         }
         this._major = major;
@@ -43,6 +45,10 @@ class SemVersion {
         return 0;
     }
 
+    print() {
+        console.log(this.toString())
+    }
+
     get major() {
         return this._major;
     }
@@ -55,7 +61,7 @@ class SemVersion {
         return this._patch;
     }
 
-    _validate(major, minor, patch) {
+    [validate](major, minor, patch) {
         const isAllInteger = Number.isInteger(major) && Number.isInteger(minor) && Number.isInteger(patch);
         const isAllOverZero = major >= 0 && minor >= 0 && patch >= 0;
         return isAllInteger && isAllOverZero;
