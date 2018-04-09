@@ -1,3 +1,5 @@
+'use strict';
+
 class SemVersion {
     constructor(major, minor, patch) {
         this.major = major;
