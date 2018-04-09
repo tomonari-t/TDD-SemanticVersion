@@ -17,4 +17,8 @@ describe('SemVersionクラス', () => {
         assert.equal(version.minor, 5);
         assert.equal(version.patch, 6);
     });
+
+    it('Version{ major: 1, minor: 2, patch 3 } のとき、"1.2.3" を得る', () => {
+        assert.equal(actual, "1.2.3");
+    });
 });
