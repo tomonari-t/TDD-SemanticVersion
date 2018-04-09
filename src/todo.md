@@ -6,9 +6,9 @@
 
 - [] バージョン番号が条件を満たしているか判断するクラスをつくる。
     - [] semver においてバージョンの各フィールドは0以上の整数である。
-        - [] Version{ major: 0, minor: 0, patch 0 } => valid
+        - [] Version{ major: 0, minor: 0, patch 0 } を受け取ったときtrueを返す。
     - [] semver においてバージョンの各フィールドは0以上の整数以外ではいけない。
-        - [] Version{ major: null, minor: undefined, patch [] } => invalid        
+        - [] Version{ major: null, minor: undefined, patch [] }　を受け取ったときfalseを返す
 
 ---
 
