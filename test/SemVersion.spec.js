@@ -23,4 +23,13 @@ describe('SemVersionクラス', () => {
             assert.equal(version.toString(), '1.2.3');
         });
     });
+
+    it('new SemVersion(1, 2, 3)のとき、Version{ major: 1, minor: 2, patch 3 } が生成できる', () => {
+        const actual = new SemVersion(1, 2, 3)
+        assert.ok(actual)
+    })
+
+    it('Version{ major: null, minor: undefined, patch [] } のとき例外をthrowする', () => {
+        assert.throws(() => new SemVersion(null, undefined, []), Error);
+    })
 });
