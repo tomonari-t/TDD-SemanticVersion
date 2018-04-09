@@ -10,13 +10,17 @@ describe('SemVersionクラス', () => {
        version = new SemVersion(1, 2, 3);
     });
 
-    it('new SemVersion(1, 2, 3)のとき、Version{ major: 1, minor: 2, patch 3 } となる', () => {
-        assert.equal(version.major, 1);
-        assert.equal(version.minor, 2);
-        assert.equal(version.patch, 3);
+    describe('インスタンス生成時、major, minor, patch３つの情報をうけとる。', () => {
+        it('new SemVersion(1, 2, 3)のとき、Version{ major: 1, minor: 2, patch 3 } となる', () => {
+            assert.equal(version.major, 1);
+            assert.equal(version.minor, 2);
+            assert.equal(version.patch, 3);
+        });
     });
 
-    it('Version{ major: 1, minor: 2, patch 3 } のとき、"1.2.3" を得る', () => {
-        assert.equal(version.toString(), '1.2.3');
+    describe('インスタンスは文字列として変換できる', () => {
+        it('Version{ major: 1, minor: 2, patch 3 } のとき、"1.2.3" を得る', () => {
+            assert.equal(version.toString(), '1.2.3');
+        });
     });
 });

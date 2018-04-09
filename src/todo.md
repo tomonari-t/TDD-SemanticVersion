@@ -1,7 +1,7 @@
 - [x] バージョン番号を示すクラスをつくる。
-    - [x] コンストラクタで3つの（number: major, minor, patch）引数を受け取る。
+    - [x] インスタンス生成時、major, minor, patch３つの情報をうけとる。
         - [x] constructor(1, 2, 3)のとき、Version{ major: 1, minor: 2, patch 3 } となる
-    - [x] バージョンオブジェクトは文字列として表現する。
+    - [x] インスタンスは文字列として変換できる
         - [x] Version{ major: 1, minor: 2, patch 3 } のとき、"1.2.3" を得る
 
 - [] バージョン番号が条件を満たしているか判断するクラスをつくる。
